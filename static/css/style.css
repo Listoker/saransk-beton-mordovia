@@ -40,6 +40,150 @@ header {
 	background-color: #00AA00;
 	color: #ffffff;
 }
+.link a {
+text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
+display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+line-height: 1; /*Задаём высоту строки (можно в пикселях)*/
+color:#ffffff;/*Задаём цвет ссылки*/
+}
+.link a:after {
+    display: block; /*превращаем его в блочный элемент*/
+    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+    height: 3px; /*задаём высоту линии*/
+    width: 0%; /*задаём начальную ширину элемента (линии)*/
+    background-color: #000000; /*цвет фона элемента*/
+    transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+.link a:hover:after,
+.link a:focus:after {
+    width: 100%;
+}
+.link a:hover{
+	color:#000000;
+}
+
+.knopkibetona a {
+text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
+display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+line-height: 1; /*Задаём высоту строки (можно в пикселях)*/
+color:#000000;/*Задаём цвет ссылки*/
+}
+.knopkibetona a:after {
+    display: block; /*превращаем его в блочный элемент*/
+    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+    height: 3px; /*задаём высоту линии*/
+    width: 0%; /*задаём начальную ширину элемента (линии)*/
+    background-color: #000000; /*цвет фона элемента*/
+    transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+.knopkibetona a:hover:after,
+.knopkibetona a:focus:after {
+    width: 100%;
+}
+.knopkibetona a:hover{
+	color:#000000;
+}
+
+.scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+   }
+   .scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+
+
+.fotoizmenenie {
+  width: 100%;
+  margin: 10px;
+  opacity: .99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.fotoizmenenie:before {
+  content: '';
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.fotoizmenenie img {
+  display: block;
+  width: 100%; /* ширина картинки */
+  height: auto; /* высота картинки */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.fotoizmenenie .caption {
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  text-align: center;
+}
+.fotoizmenenie .caption span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.fotoizmenenie .caption .title {
+  line-height: 1;
+  font-weight: normal;
+  font-size: 18px;
+}
+.fotoizmenenie .caption .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.fotoizmenenie:focus:before,
+.fotoizmenenie:focus span, .fotoizmenenie:hover:before,
+.fotoizmenenie:hover span {
+  opacity: 1;
+}
+.fotoizmenenie:focus:before, .fotoizmenenie:hover:before {
+  top: 50%;
+}
+.fotoizmenenie:focus span, .fotoizmenenie:hover span {
+  top: 0;
+}
+.fotoizmenenie:focus .title, .fotoizmenenie:hover .title {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+.fotoizmenenie:focus .info, .fotoizmenenie:hover .info {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
 .header-pretitle {
 	margin-top: 102px;
 }
