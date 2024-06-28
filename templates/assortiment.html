@@ -26,13 +26,15 @@
 		<header>
  			<div class="container">
  				<div class="register">
+ 					<div class="link">
  					<a href="/">ГЛАВНАЯ</a>
  					<a href="/assortiment/beton">АССОРТИМЕНТ</a>
  					<a href="/kontakti">КОНТАКТЫ</a>
+ 					</div>
  				</div>
  				<div class="row">
  					<div class="col-lg-5">
- 						<h1 class="header-title wow fadeInRightBig"data-wow-delay="0.2s">market</h1>
+ 						<h1 class="header-title wow fadeInRightBig"data-wow-delay="0.2s">СТРОЙ ТРАНС СЕРВИС</h1>
  						<div class="header-button-block wow fadeInRightBig"data-wow-delay="0.4s">
  						</div>
  					</div>
@@ -63,9 +65,16 @@
 			<div class="col-md-6">
 				<div class="portfolio-col-1">
 					{% set itemm = "foto_betona/" + pervoe + ".png" %}
+				<div class="fotoizmenenie">
 				<a href="/tovar/{{ pervoe }}">
 				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
-				{{ pervoe }}</a>
+				{{ pervoe }}
+			<div class="caption">
+        <span class="title">Заголовок картинки</span>
+        <span class="info">Краткое описание или анонс записи</span>
+    			</div></a>
+				
+				</div>
 				</div>
 				
 			</div>
@@ -74,10 +83,16 @@
 			<div class="col-md-6">
 			<div class="portfolio-col-2">
 				{% set itemm = "foto_betona/" + vtoroe + ".png" %}
+			<div class="fotoizmenenie">
 			<a href="/tovar/{{ vtoroe }}">
 			<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
 			{{ vtoroe }}
+			<div class="caption">
+        <span class="title">Заголовок картинки</span>
+        <span class="info">Краткое описание или анонс записи</span>
+    			</div>
 		</a>
+			</div>
 			</div>
 			
 			</div>
