@@ -16,6 +16,7 @@
 .register {
 	display: flex;
 	justify-content: center;
+	white-space: nowrap;
 }
 
 
@@ -39,6 +40,25 @@ header {
 	padding-bottom: 59px;
 	background-color: #00AA00;
 	color: #ffffff;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+ 
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+ 
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+ 
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 .link a {
 text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
@@ -99,7 +119,6 @@ color:#000000;/*Задаём цвет ссылки*/
 
 .fotoizmenenie {
   width: 100%;
-  margin: 10px;
   opacity: .99;
   overflow: hidden;
   position: relative;
@@ -184,6 +203,9 @@ color:#000000;/*Задаём цвет ссылки*/
           transition-delay: 0.25s;
 }
 
+.glavnoe {
+	white-space: nowrap;
+}
 .header-pretitle {
 	margin-top: 102px;
 }
@@ -265,11 +287,11 @@ header small {
 .porfolio-title, .porfolio-subtitle {
 	text-align: center;
 }
-.portfolio-col-1 {
+.colonna-col-1 {
 	padding-left: 50px;
-		text-align: center;
+	text-align: center;
 }
-.portfolio-col-2 {
+.colonna-col-2 {
 	padding-right: 50px;
 		text-align: center;
 }
@@ -346,6 +368,12 @@ footer {
 	.header-pretitle {
 		margin-top: 60px;
 	}
+	.colonna-telefon {
+		white-space: nowrap;
+	}
+	.register {
+		white-space: nowrap;
+	}
 }
 
 @media (max-width: 992px) {
@@ -375,16 +403,21 @@ footer {
 }
 	
 @media (max-width: 768px) {
-	.portfolio-col-1 {
-		padding-left: 20px;
+	.colonna-col-1 {
+		padding-left: 0px;
 		padding-right: 20px;
 		margin-bottom: 40px;
+		text-align: center;
 	}
-	.portfolio-col-2 {
-		padding-left: 20px;
+	.colonna-col-2 {
+		padding-left: 0px;
 		padding-right: 20px;
+		text-align: center;
 	}
 	.footer-autor, .footer-text{
 		text-align: center;
+	}
+	.colonna-telefon {
+		display: none;
 	}
 }
