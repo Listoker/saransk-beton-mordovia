@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	  <!-- Важная техническая информация для браузера -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Иконка, которая будет на вкладке в браузере -->
+		<link rel="icon" href="/favicon.ico">
+		<!-- Заголовок на вкладке в браузере -->
+		<title>market</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;sudset=cyrillic-ext"rel="stylesheet">
+		<!-- Подключаем наш файл со стилями, который находится в папке css-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-grid.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css-4.1.1.zip') }}">
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	</head>
+	<body>
+
+		<header>
+ 			<div class="container">
+ 				<div class="register">
+ 					<div class="link">
+ 					<a href="/">ГЛАВНАЯ</a>
+ 					<a href="/assortiment/beton">АССОРТИМЕНТ</a>
+ 					<a href="/kontakti">КОНТАКТЫ</a>
+ 					</div>
+ 				</div>
+ 				<div class="row">
+ 					<div class="col-lg-5">
+ 						<h1 class="header-title wow fadeInRightBig"data-wow-delay="0.2s">СТРОЙ ТРАНС СЕРВИС</h1>
+ 						<div class="header-button-block wow fadeInRightBig"data-wow-delay="0.4s">
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+
+ 		</header>
+
+<section class="portfolio">
+	<div class="container">
+		<div class="porfolio-block wow fadeIn">
+		<h2 class="portfolio-title">АССОРТИМЕНТ</h2>
+		<p class="porfolio-subtitle">Информация</p>
+		<div class="knopkibetona">
+		<a href="/assortiment/beton">Бетон</a>
+		
+		</div>
+
+		
+    <div class="vse_foto_tovarov">
+    {% for item in tovari %}
+   
+    {% set ff = item.split("#") %}
+    {% set pervoe = ff[0] %}
+    {% set vtoroe = ff[1] %}
+        <div class="row">
+        	
+			<div class="col-md-6">
+				<div class="colonna-col-1">
+					{% set itemm = "foto_betona/" + pervoe + ".png" %}
+				<div class="fotoizmenenie">
+				<a href="/tovar/{{ pervoe }}">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				{{ pervoe }}
+			<div class="caption">
+        <span class="title">Заголовок картинки</span>
+        <span class="info">Краткое описание или анонс записи</span>
+    			</div></a>
+				
+				</div>
+				</div>
+				
+			</div>
+			
+			{% if item[-1] != "#" %}
+			<div class="col-md-6">
+			<div class="colonna-col-2">
+				{% set itemm = "foto_betona/" + vtoroe + ".png" %}
+			<div class="fotoizmenenie">
+			<a href="/tovar/{{ vtoroe }}">
+			<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+			{{ vtoroe }}
+			<div class="caption">
+        <span class="title">Заголовок картинки</span>
+        <span class="info">Краткое описание или анонс записи</span>
+    			</div>
+		</a>
+			</div>
+			</div>
+			
+			</div>
+			{% endif %}
+			
+		</div>
+    {% endfor %}
+    </div>
+    	
+		
+		</div>
+	</div>
+	
+</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h4 class="footer-author">Спасибо, что посетили сайт</h4>
+			</div>
+			<div class="col-md-4">
+				<div class="social-block">
+					<p>Если нашли ошибку, то можете написать разработчику:</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="footer-cta-block">
+					<p class="footer-cta">egor57557@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+<script>
+	new WOW().init();
+</script>
+
+</body>
+</html>

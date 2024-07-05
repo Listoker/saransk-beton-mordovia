@@ -236,6 +236,9 @@ color:#000000;/*Задаём цвет ссылки*/
 .header-button:hover {
 	box-shadow: none;
 }
+.telefon-mini {
+	display: none;
+}
 header small {
 	font-size: 12px;
 	display: black;
@@ -420,4 +423,13 @@ footer {
 	.colonna-telefon {
 		display: none;
 	}
+	.glavnoe {
+		text-align: center;
+	}
+	.register {
+		text-align: center;
+	}
+	.telefon-mini {
+	display: block;
+}
 }

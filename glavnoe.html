@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	  <!-- Важная техническая информация для браузера -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Иконка, которая будет на вкладке в браузере -->
+		<link rel="icon" href="/favicon.ico">
+		<!-- Заголовок на вкладке в браузере -->
+		<title>Купить бетон от производителя в Саранске</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;sudset=cyrillic-ext"rel="stylesheet">
+		<!-- Подключаем наш файл со стилями, который находится в папке css-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-grid.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css-4.1.1.zip') }}">
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+
+	<div class="row">
+    <div class="col-8">
+      <div class="col-lg-7">
+				<div class="register">
+ 					<div class="link">
+ 					<a href="/">ГЛАВНАЯ</a>
+ 					<a href="/assortiment/beton">АССОРТИМЕНТ</a>
+ 					<a href="/kontakti">КОНТАКТЫ</a>
+ 					</div>
+ 				</div>
+ 				<div class="row">
+ 					<div class="col-lg-7">
+ 						<div class="glavnoe">
+ 						<h1 class="header-title wow fadeInRightBig"data-wow-delay="0.2s">СТРОЙ ТРАНС СЕРВИС</h1>
+ 					</div>
+ 					
+ 						<div class="header-button-block wow fadeInRightBig"data-wow-delay="0.4s">
+ 						</div>
+ 					</div>
+ 				</div>
+				
+			</div>
+    </div>
+    <div class="col">
+      <div class="col-sm-6">
+			<div class="colonna-telefon">
+				<b>Телефоны:</b></br>
+							<a href="tel:89297473136">8 (929)747-31-36</a></br>
+							<a href="tel:88342373136">8 (834)237-31-36</a></br>
+			</div>
+			</div>
+    </div>
+  </div>
+  <div class="telefon-mini">
+  	<b>Телефоны:</b>
+							<a href="tel:89297473136">8(929)747-31-36</a>
+							<b>,</b>
+							<a href="tel:88342373136">8(834)237-31-36</a>
+  </div>
+ 			
+
+
+ 		</header>
+
+<section class="portfolio">
+	<div class="container">
+		<div class="porfolio-block wow fadeIn">
+		<div class="row">
+        	
+			<div class="col-md-5">
+				<div class="colonna-col-1">
+					{% set itemm = "foto_glavn/zavod.png" %}
+		<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</div>
+				
+			</div>
+			
+
+			<div class="col-md-6">
+			<div class="colonna-col-2">
+				<h2>Бетон собственного производства в Саранске</h2>
+			</div>
+			</div>
+			
+			
+		</div>
+
+		<h2 class="portfolio-title">Что мы производим</h2>
+		
+    <div class="row">
+			<div class="col-md-4">
+				{% set itemm = "foto_glavn/beton100.png" %}
+				<div class="scale">
+				<a href="/assortiment/beton">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</a></div>
+			</div>
+			<div class="col-md-4">
+				
+					{% set itemm = "foto_glavn/beton150.png" %}
+				<div class="scale">
+				<a href="/assortiment/beton">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</a>
+				</div>
+				
+			</div>
+			<div class="col-md-4">
+				<div class="footer-cta-block">
+					{% set itemm = "foto_glavn/beton100.png" %}
+				<div class="scale">
+				<a href="/assortiment/bloki">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</a>
+				</div>
+				</div>
+			</div>
+	</div>
+	<div class="row">
+			<div class="col-md-4">
+				{% set itemm = "foto_glavn/beton100.png" %}
+				<div class="scale">
+				<a href="/assortiment/beton">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</a></div>
+			</div>
+			<div class="col-md-4">
+				
+					{% set itemm = "foto_glavn/beton150.png" %}
+				<div class="scale">
+				<a href="/assortiment/beton">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</a>
+				
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="footer-cta-block">
+					{% set itemm = "foto_glavn/beton100.png" %}
+				<div class="scale">
+				<a href="/assortiment/bloki">
+				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</a>
+				</div>
+				</div>
+			</div>
+	</div>
+	<table>
+  <tr>
+    <th>Марка бетона</th>
+    <th>Наполнитель</th>
+    <th>Цена</th>
+  </tr>
+  <tr>
+    <td><a href="/assortiment/beton">Данные 1.1</a></td>
+    <td>Данные 1.2</td>
+    <td>Данные 2.2</td>
+  </tr>
+  <tr>
+    <td><a href="/assortiment/beton">Данные 1.1</a></td>
+    <td>Данные 1.2</td>
+    <td>Данные 2.2</td>
+  </tr>
+  <tr>
+    <td><a href="/assortiment/beton">Данные 1.1</a></td>
+    <td>Данные 2.2</td>
+    <td>Данные 2.2</td>
+  </tr>
+  <tr>
+    <td><a href="/assortiment/beton">Данные 1.1</a></td>
+    <td>Данные 2.2</td>
+    <td>Данные 2.2</td>
+  </tr>
+</table>
+	<h2>О компании</h2>
+    	
+		
+		</div>
+	</div>
+	
+</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<p>Официальный сайт СТРОЙ ТРАНС СЕРВИС. Информация на сайте носит исключительно рекламно-информационный характер. Цена указанная на сайте, может меняться. Пожалуйста, уточняйте стоимость смеси и доставки по телефону у наших менеджеров.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+<script>
+	new WOW().init();
+</script>
+
+</body>
+</html>
