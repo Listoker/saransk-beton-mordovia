@@ -20,8 +20,12 @@
 	<body>
 
 		<header>
- 			<div class="container">
- 				<div class="register">
+			<div class="container">
+
+	<div class="row">
+    <div class="col-md-8">
+      <div class="col-lg-7">
+				<div class="register">
  					<div class="link">
  					<a href="/">ГЛАВНАЯ</a>
  					<a href="/assortiment/beton">АССОРТИМЕНТ</a>
@@ -30,20 +34,41 @@
  					</div>
  				</div>
  				<div class="row">
- 					<div class="col-lg-5">
- 						<h1 class="header-title wow fadeInRightBig"data-wow-delay="0.2s">СТРОЙ ТРАНС СЕРВИС</h1>
+ 					<div class="col-lg-7">
+ 						<div class="glavnoe">
+ 						<h1 class="header-title wow fadeInRightBig"data-wow-delay="0.2s">БЕТОН СТРОЙ КОМПЛЕКТ</h1>
+ 					</div>
+ 					
  						<div class="header-button-block wow fadeInRightBig"data-wow-delay="0.4s">
  						</div>
  					</div>
  				</div>
- 			</div>
-
+				
+			</div>
+    </div>
+    <div class="col">
+      <div class="col-sm-6">
+			<div class="colonna-telefon">
+				<b>Телефоны:</b></br>
+							<a href="tel:89297473136">8 (929)747-31-36</a></br>
+							<a href="tel:88342373136">8 (834)237-31-36</a></br>
+			</div>
+			</div>
+    </div>
+  </div>
+  <div class="telefon-mini">
+  	<b>Телефоны:</b>
+							<a href="tel:89297473136">8(929)747-31-36</a>
+							<b>,</b>
+							<a href="tel:88342373136">8(834)237-31-36</a>
+  </div>
+ 			
  		</header>
 
-<section class="portfolio">
+<section class="osnovnovnoe">
 	<div class="container">
 		<div class="porfolio-block wow fadeIn">
-		<h2 class="portfolio-title">Фотографии</h2>
+		<h2 class="osnovnovnoe-title">Фотографии</h2>
 		<p class="porfolio-subtitle">Информация</p>
 		
     <div class="vse_foto_tovarov">
@@ -51,7 +76,7 @@
         <div class="row">
         	
 			<div class="col-md-6">
-				<div class="portfolio-col-1">
+				<div class="osnovnovnoe-col-1">
 					<h4>{{ beton }}</h4>
 					<h4>цена</h4>
 				</div>
@@ -60,13 +85,13 @@
 			
 			
 			<div class="col-md-6">
-			<div class="portfolio-col-2">
+			<div class="osnovnovnoe-col-2">
 				{% set itemm = "foto_betona/" + beton + ".png" %}
 				<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
 			</div>
 			
 			</div>
-			<h2 class="portfolio-title">Описание</h2>
+			<h2 class="osnovnovnoe-title">Описание</h2>
 			
 			
 		</div>
@@ -81,18 +106,7 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-				<h4 class="footer-author">Спасибо, что посетили сайт</h4>
-			</div>
-			<div class="col-md-4">
-				<div class="social-block">
-					<p>Если нашли ошибку, то можете написать разработчику:</p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="footer-cta-block">
-					<p class="footer-cta">egor57557@gmail.com</p>
-				</div>
+			<p>Официальный сайт СТРОЙ ТРАНС СЕРВИС. Информация на сайте носит исключительно рекламно-информационный характер. Цена указанная на сайте, может меняться. Пожалуйста, уточняйте стоимость смеси и доставки по телефону у наших менеджеров.</p>
 			</div>
 		</div>
 	</div>
