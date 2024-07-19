@@ -252,12 +252,12 @@ header small {
 .knopkibetona {
 	text-align: center;
 }
-.portfolio {
+.osnovnovnoe {
 	background-color: #dddddd;
 	padding-top: 44px;
 	padding-bottom: 71px;
 }
-.portfolio-block {
+.osnovnovnoe-block {
 	background-color: #fff;
 	padding-top: 29px;
 	padding-bottom: 44px;
@@ -265,14 +265,14 @@ header small {
 .foto12345 {
 	text-align: center;
 }
-.portfolio-title {
+.osnovnovnoe-title {
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 18px;
 	color: #072d6f;
 	margin-bottom: 10px;
 }
-.portfolio-title2 {
+.osnovnovnoe-title2 {
 	text-align: center;
 	font-size: 18px;
 	color: #000000;
@@ -298,25 +298,25 @@ header small {
 	padding-right: 50px;
 		text-align: center;
 }
-.portfolio-block h3 {
+.osnovnovnoe-block h3 {
 	color: #072d6f;
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.portfolio-block h2 {
+.osnovnovnoe-block h2 {
 	color: #000000;
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.portfolio-block p {
+.osnovnovnoe-block p {
 	color: #072d6f;
 	font-size: 14px;
 	font-weight: 400;
 	text-decoration: : underline;
 }
-.portfolio-text {
+.osnovnovnoe-text {
 	color: #8f8f8f;
 	font-size: 14px;
 	font-weight: 400;
@@ -367,6 +367,9 @@ footer {
 	background-color: #fff;
 	color: #3a7dfd;
 }
+.register {
+		white-space: nowrap;
+	}
 @media (max-width: 1200px) {
 	.header-pretitle {
 		margin-top: 60px;
@@ -408,13 +411,12 @@ footer {
 @media (max-width: 768px) {
 	.colonna-col-1 {
 		padding-left: 0px;
-		padding-right: 20px;
 		margin-bottom: 40px;
 		text-align: center;
 	}
 	.colonna-col-2 {
 		padding-left: 0px;
-		padding-right: 20px;
+		padding-right: 0px;
 		text-align: center;
 	}
 	.footer-autor, .footer-text{
@@ -423,13 +425,76 @@ footer {
 	.colonna-telefon {
 		display: none;
 	}
-	.glavnoe {
-		text-align: center;
-	}
-	.register {
-		text-align: center;
-	}
+	
 	.telefon-mini {
 	display: block;
 }
+}
+@media (max-width: 575px) {
+	.exel {
+		width: 100%;
+		text-align: center;
+	}
+	.container {
+		width: 95%;
+	}
+}
+@media (max-width: 465px) {
+	.register {
+		font-size: 0.95rem;
+	}
+	.container {
+		width: 93%;
+	}
+	.glavnoe {
+		font-size: 0.99rem;
+	}
+}
+@media (max-width: 410px) {
+	.register {
+		white-space: normal;
+		font-size: 0.92rem;
+	}
+	.glavnoe {
+		font-size: 0.90rem;
+	}
+	.telefon-mini {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 371px) {
+	.register {
+		white-space: normal;
+		font-size: 0.92rem;
+	}
+	.glavnoe {
+		font-size: 0.85rem;
+	}
+	.telefon-mini {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 350px) {
+	.register {
+		white-space: normal;
+		font-size: 0.92rem;
+	}
+	.glavnoe {
+		font-size: 0.80rem;
+	}
+	.telefon-mini {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 330px) {
+	.register {
+		white-space: normal;
+		font-size: 0.92rem;
+	}
+	.glavnoe {
+		font-size: 0.75rem;
+	}
+	.telefon-mini {
+		font-size: 1rem;
+	}
 }
