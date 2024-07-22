@@ -68,8 +68,8 @@
 <section class="osnovnovnoe">
 	<div class="container">
 		<div class="porfolio-block wow fadeIn">
-		<h2 class="osnovnovnoe-title">В скором времене будет информация для данной марки</h2>
-		<p class="porfolio-subtitle">Информация</p>
+		<h2 class="osnovnovnoe-title">Информация для данной марки</h2>
+		
 		
     <div class="vse_foto_tovarov">
     
@@ -77,8 +77,9 @@
         	
 			<div class="col-md-6">
 				<div class="osnovnovnoe-col-1">
-					<h4>{{ beton }}</h4>
-					<h4>цена</h4>
+					<h4>Марка {{ info[0] }}</h4>
+					<h4>цена {{ info[1] }}</h4>
+					<h4>Наполнитель {{ info[2] }}</h4>
 				</div>
 				
 			</div>
@@ -92,7 +93,7 @@
 			
 			</div>
 			<h2 class="osnovnovnoe-title">Описание</h2>
-			
+			<h4> {{ info[3] }}</h4>
 			
 		</div>
     </div>

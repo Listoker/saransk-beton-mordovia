@@ -2,7 +2,7 @@ import os
 import datetime
 from flask import Flask, redirect, render_template, request
 from flask_wtf import FlaskForm
-from wtforms import StringField, FloatField , BooleanField, SubmitField
+from wtforms import StringField, FloatField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 from wtforms.validators import InputRequired
 from data import db_session
@@ -49,7 +49,9 @@ def calculator():
 @app.route('/tovar/<beton>')
 def beton_(beton):
     # выбранный бетон
-    return render_template('beton.html', beton=beton)
+    with open(f'beton/{beton}.txt', encoding='UTF-8') as f:
+        info_ = f.read().split('#')
+        return render_template('beton.html', info=info_, beton=beton)
 
 
 if __name__ == '__main__':
