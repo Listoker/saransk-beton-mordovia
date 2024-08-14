@@ -1,20 +1,8 @@
-import os
-import datetime
-from flask import Flask, redirect, render_template, request
-from flask_wtf import FlaskForm
-from wtforms import StringField, FloatField, BooleanField, SubmitField
-from wtforms.validators import DataRequired
-from wtforms.validators import InputRequired
-from data import db_session
-import sqlalchemy
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secretkey'
 
-
-class MyForm(FlaskForm):
-    name = FloatField('A', validators=[InputRequired()])
 
 @app.route('/')
 def glavnoe():
@@ -36,14 +24,9 @@ def kontakti():
     return render_template('kontakti.html')
 
 
-@app.route('/calculator', methods=['GET', 'POST'])
+@app.route('/calculator')
 def calculator():
-    form = MyForm()
-    if form.validate_on_submit():
-        name = form.name.data
-        print(name)
-        return render_template('calculator.html', form=form)
-    return render_template('calculator.html', form=form)
+    return render_template('calculator.html')
 
 
 @app.route('/tovar/<beton>')
