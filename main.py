@@ -14,8 +14,10 @@ def glavnoe():
 def assortiment(tovar):
     # ассортимент
     with open(f'assortiment/{tovar}.txt', encoding='UTF-8') as f:
-        text_vsego = f.read().split('#')
-        return render_template('assortiment.html', tovari=text_vsego)
+        with open(f'assortiment/{tovar}_spisok.txt', encoding='UTF-8') as k:
+            text_vsego = f.read().split('#')
+            info = k.read().split('#')
+            return render_template('assortiment.html', tovari=text_vsego, infoo=info)
 
 
 @app.route('/kontakti')

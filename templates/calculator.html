@@ -74,6 +74,74 @@
 
 			<div class="col-md-5">
 				<div class="colonna-col-1">
+					{% set itemm = "foto_glavn/plita.png" %}
+		<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</div>
+
+			</div>
+
+
+			<div class="col-md-6">
+			<div class="colonna-col-2">
+				<!-- поле ввода первого числа -->
+	<b>A </b><input id="num1" /><b>м</b><br>
+	<b>B </b><input id="num2" /><b>м</b><br>
+	<b>C </b><input id="num3" /><b>м</b><br>
+	<b>Процент дополнительного бетона </b><input id="num4" /><b>%</b><br>
+
+	<!-- блок с кнопками -->
+	<div id="operator_btns">
+	  
+	 
+	</div>
+
+	<!-- поле ввода второго числа -->
+	<br>
+
+	<!-- кнопка для расчётов -->
+	<button onclick="func()">Посчитать</button>
+
+	<!-- здесь будет результат -->
+	<p id="result"></p>
+	<b>Ответ дается в м3</b>
+
+	<!-- наш скрипт -->
+	<script>
+	  // переменная, в которой хранится выбранное математическое действие
+	  var op; 
+	  op='*'
+
+	  // функция расчёта
+	  function func() {
+	  	// переменная для результата
+	    var result;
+	    // получаем первое и второе число
+	    var num1 = Number(document.getElementById("num1").value);
+	    var num2 = Number(document.getElementById("num2").value);
+	    var num3 = Number(document.getElementById("num3").value);
+	    var num4 = Number(document.getElementById("num4").value);
+	    // смотрим, что было в переменной с действием, и действуем исходя из этого
+	    switch (op) {
+	      
+	      case '*':
+	        result = num1 * num2 * num3 * (1 + num4	/ 100);
+	        break;
+	      
+	    }
+
+	    // отправляем результат на страницу
+	    document.getElementById("result").innerHTML = result;
+	  }
+	</script>
+			</div>
+			</div>
+
+
+		</div>
+		<div class="row">
+
+			<div class="col-md-5">
+				<div class="colonna-col-1">
 					{% set itemm = "foto_glavn/lenta.png" %}
 		<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
 				</div>
@@ -142,74 +210,7 @@
 
 
 		</div>
-		<div class="row">
-
-			<div class="col-md-5">
-				<div class="colonna-col-1">
-					{% set itemm = "foto_glavn/plita.png" %}
-		<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
-				</div>
-
-			</div>
-
-
-			<div class="col-md-6">
-			<div class="colonna-col-2">
-				<!-- поле ввода первого числа -->
-	<b>A </b><input id="num1" /><b>м</b><br>
-	<b>B </b><input id="num2" /><b>м</b><br>
-	<b>C </b><input id="num3" /><b>м</b><br>
-	<b>Процент дополнительного бетона </b><input id="num4" /><b>%</b><br>
-
-	<!-- блок с кнопками -->
-	<div id="operator_btns">
-	  
-	 
-	</div>
-
-	<!-- поле ввода второго числа -->
-	<br>
-
-	<!-- кнопка для расчётов -->
-	<button onclick="func()">Посчитать</button>
-
-	<!-- здесь будет результат -->
-	<p id="result"></p>
-	<b>Ответ дается в м3</b>
-
-	<!-- наш скрипт -->
-	<script>
-	  // переменная, в которой хранится выбранное математическое действие
-	  var op; 
-	  op='*'
-
-	  // функция расчёта
-	  function func() {
-	  	// переменная для результата
-	    var result;
-	    // получаем первое и второе число
-	    var num1 = Number(document.getElementById("num1").value);
-	    var num2 = Number(document.getElementById("num2").value);
-	    var num3 = Number(document.getElementById("num3").value);
-	    var num4 = Number(document.getElementById("num4").value);
-	    // смотрим, что было в переменной с действием, и действуем исходя из этого
-	    switch (op) {
-	      
-	      case '*':
-	        result = num1 * num2 * num3 * (1 + num4	/ 100);
-	        break;
-	      
-	    }
-
-	    // отправляем результат на страницу
-	    document.getElementById("result").innerHTML = result;
-	  }
-	</script>
-			</div>
-			</div>
-
-
-		</div>
+		
 
 
 <div class="row">
@@ -229,6 +230,7 @@
 	<b>D </b><input id="num001" /><b>м</b><br>
 	<b>H </b><input id="num002" /><b>м</b><br>
 	<b>Процент дополнительного бетона </b><input id="num005" /><b>%</b><br>
+	<b>Количество в шт</b><input id="num006" /><b>%</b><br>
 
 	<!-- блок с кнопками -->
 	<div id="operator_btns">
@@ -260,11 +262,12 @@
 	    var num001 = Number(document.getElementById("num001").value);
 	    var num002 = Number(document.getElementById("num002").value);
 	    var num005 = Number(document.getElementById("num005").value);
+	    var num006 = Number(document.getElementById("num006").value);
 	    // смотрим, что было в переменной с действием, и действуем исходя из этого
 	    switch (op) {
 	      
 	      case '*':
-	        result3 = (3.1415 * num001 * num001 * num002 / 4) * (1 + num005 / 100);
+	        result3 = (3.1415 * num001 * num001 * num002 / 4) * (1 + num005 / 100) * num006;
 	        break;
 	      
 	    }
@@ -289,7 +292,7 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<p>Официальный сайт СТРОЙ ТРАНС СЕРВИС. Информация на сайте носит исключительно рекламно-информационный характер. Цена указанная на сайте, может меняться. Пожалуйста, уточняйте стоимость смеси и доставки по телефону у наших менеджеров.</p>
+			<p>Официальный сайт ООО «БЕТОН СТРОЙ КОМПЛЕКТ». Информация на сайте носит исключительно рекламно-информационный характер. Цена указанная на сайте, может меняться. Пожалуйста, уточняйте стоимость смеси и доставки по телефону у наших менеджеров.</p>
 			</div>
 		</div>
 	</div>
