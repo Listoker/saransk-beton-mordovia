@@ -207,6 +207,9 @@ color:#000000;/*Задаём цвет ссылки*/
 .glavnoe {
 	white-space: nowrap;
 }
+.centririvanie {
+	text-align: center
+}
 .header-pretitle {
 	margin-top: 102px;
 }

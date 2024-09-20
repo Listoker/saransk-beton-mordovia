@@ -7,7 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Иконка, которая будет на вкладке в браузере -->
-		<link rel="icon" href="/favicon.ico">
+		{% set icon_foto = "foto_glavn/favicon.png" %}
+		<link rel="icon" href="{{ url_for('static', filename=icon_foto) }}">
 		<!-- Заголовок на вкладке в браузере -->
 		<title>Купить бетон от производителя в Саранске</title>
 
@@ -212,6 +213,77 @@
 		</div>
 		
 
+		<div class="row">
+
+			<div class="col-md-5">
+				<div class="colonna-col-1">
+					{% set itemm = "foto_glavn/balka.png" %}
+		<img src="{{ url_for('static', filename=itemm) }}" alt="ошибка">
+				</div>
+
+			</div>
+
+
+			<div class="col-md-6">
+			<div class="colonna-col-2">
+				<!-- поле ввода первого числа -->
+	<b>a </b><input id="num1000" /><b>м</b><br>
+	<b>b </b><input id="num2000" /><b>м</b><br>
+	<b>h </b><input id="num3000" /><b>м</b><br>
+	<b>Процент дополнительного бетона </b><input id="num4000" /><b>%</b><br>
+	<b>Количество в шт </b><input id="num5000" /><b>м</b><br>
+
+	<!-- блок с кнопками -->
+	<div id="operator_btns">
+	  
+	 
+	</div>
+
+	<!-- поле ввода второго числа -->
+	<br>
+
+	<!-- кнопка для расчётов -->
+	<button onclick="func5()">Посчитать</button>
+
+	<!-- здесь будет результат -->
+	<p id="result5"></p>
+	<b>Ответ дается в м3</b>
+
+	<!-- наш скрипт -->
+	<script>
+	  // переменная, в которой хранится выбранное математическое действие
+	  var op; 
+	  op='*'
+
+	  // функция расчёта
+	  function func5() {
+	  	// переменная для результата
+	    var result;
+	    // получаем первое и второе число
+	    var num1000 = Number(document.getElementById("num1000").value);
+	    var num2000 = Number(document.getElementById("num2000").value);
+	    var num3000 = Number(document.getElementById("num3000").value);
+	    var num4000 = Number(document.getElementById("num4000").value);
+	    var num5000 = Number(document.getElementById("num5000").value);
+	    // смотрим, что было в переменной с действием, и действуем исходя из этого
+	    switch (op) {
+	      
+	      case '*':
+	        result5 = num1000 * num2000 * num3000 * num5000 * (1 + num4000	/ 100);
+	        break;
+	      
+	    }
+
+	    // отправляем результат на страницу
+	    document.getElementById("result5").innerHTML = result5;
+	  }
+	</script>
+			</div>
+			</div>
+
+
+		</div>
+
 
 <div class="row">
 
@@ -274,6 +346,58 @@
 
 	    // отправляем результат на страницу
 	    document.getElementById("result3").innerHTML = result3;
+	  }
+	</script>
+
+<br>
+<br>
+	<button onclick="func10()">Посчитать всё</button>
+	<p id="result10"></p>
+	<b>Ответ дается в м3</b>
+
+	<!-- наш скрипт -->
+	<script>
+	  // переменная, в которой хранится выбранное математическое действие
+	  var op; 
+	  op='*'
+
+	  // функция расчёта
+	  function func10() {
+	  	// переменная для результата
+	    var result;
+	    // получаем первое и второе число
+	    var num001 = Number(document.getElementById("num001").value);
+	    var num002 = Number(document.getElementById("num002").value);
+	    var num005 = Number(document.getElementById("num005").value);
+	    var num006 = Number(document.getElementById("num006").value);
+
+	    var num1 = Number(document.getElementById("num1").value);
+	    var num2 = Number(document.getElementById("num2").value);
+	    var num3 = Number(document.getElementById("num3").value);
+	    var num4 = Number(document.getElementById("num4").value);
+
+	    var num01 = Number(document.getElementById("num01").value);
+	    var num02 = Number(document.getElementById("num02").value);
+	    var num03 = Number(document.getElementById("num03").value);
+	    var num04 = Number(document.getElementById("num04").value);
+	    var num05 = Number(document.getElementById("num05").value);
+
+	    var num1000 = Number(document.getElementById("num1000").value);
+	    var num2000 = Number(document.getElementById("num2000").value);
+	    var num3000 = Number(document.getElementById("num3000").value);
+	    var num4000 = Number(document.getElementById("num4000").value);
+	    var num5000 = Number(document.getElementById("num5000").value);
+	    // смотрим, что было в переменной с действием, и действуем исходя из этого
+	    switch (op) {
+	      
+	      case '*':
+	        result10 = ((3.1415 * num001 * num001 * num002 / 4) * (1 + num005 / 100) * num006) + (num1 * num2 * num3 * (1 + num4	/ 100)) + ((num01 * 2 - num04 * 4 + num02 * 2) * num03 * (1 + num05 / 100)) + (num1000 * num2000 * num3000 * num5000 * (1 + num4000	/ 100));
+	        break;
+	      
+	    }
+
+	    // отправляем результат на страницу
+	    document.getElementById("result10").innerHTML = result10;
 	  }
 	</script>
 					
