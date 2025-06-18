@@ -1,8 +1,6 @@
 from flask import Flask, render_template
 
-
 app = Flask(__name__)
-
 
 @app.route('/')
 def glavnoe():
@@ -26,11 +24,6 @@ def kontakti():
     return render_template('kontakti.html')
 
 
-@app.route('/calculator')
-def calculator():
-    return render_template('calculator.html')
-
-
 @app.route('/tovar/<beton>')
 def beton_(beton):
     # выбранный бетон
@@ -39,5 +32,30 @@ def beton_(beton):
         return render_template('beton.html', info=info_, beton=beton)
 
 
+@app.route('/calculator')
+def calculator():
+    return render_template('calculator.html')
+
+
+@app.route('/yandex_c40aeeb4878e9f6b.html')
+def yandex():
+    return render_template('yandex_c40aeeb4878e9f6b.html')
+
+
+@app.route('/yandex_33ff5a54adc614ce.html')
+def yandexx():
+    return render_template('yandex_33ff5a54adc614ce.html')
+
+
+@app.route('/google2f825bb41dc7f45d.html')
+def google():
+    return render_template('google2f825bb41dc7f45d.html')
+
+
+@app.route('/sitemap')
+def sitemap():
+    return render_template('sitemap.txt')
+
+
 if __name__ == '__main__':
-    app.run(port=8080, host='127.0.0.1')
+    app.run(host='0.0.0.0')

@@ -410,6 +410,10 @@ footer {
 		font-size: 14px;
 		padding: 8px 35px;
 		}
+		.register {
+		font-size: 0.97rem;
+	}
+
 }
 	
 @media (max-width: 768px) {
@@ -442,10 +446,13 @@ footer {
 	.container {
 		width: 95%;
 	}
+	.register {
+		font-size: 0.97rem;
+	}
 }
 @media (max-width: 465px) {
 	.register {
-		font-size: 0.95rem;
+		font-size: 0.91rem;
 	}
 	.container {
 		width: 93%;
